@@ -27,7 +27,7 @@ h1{
     padding: 35px;
 }
 
-h3 {
+h2,h3 {
     font-size: 20px;
     text-align: center;
 }
@@ -39,10 +39,31 @@ nav {
     font-size: 20px;
     
 }
+a {
+    text-decoration: none;
+}
+a:link {
+    color:black;
+  }
+  
+  /* visited link */
+  a:visited {
+    color:black;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color:black;
+  }
+  
+  /* selected link */
+  a:active {
+    color:black;
+  }
 nav a {
     padding: 5px;
     /* font-size: 23px; */
-    color: black;
+    /* color:black; */
 }
 
 main p {
@@ -51,6 +72,12 @@ main p {
 
 .credit{
     margin: auto auto;
+    font-style: italic;
+}
+
+footer {
+    font-size: 5px;
+    font-style: italic;
 }
 
 @media only screen and (max-width: 800px) {
