@@ -28,7 +28,7 @@ h1{
 }
 
 h2,h3 {
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
 }
 
@@ -39,6 +39,22 @@ nav {
     font-size: 20px;
     
 }
+
+.contact{
+    /* border: 2px solid black; */
+    margin: auto auto;
+    width: 600px;
+}
+
+.error	{
+	color:red;
+	font-style:italic;	
+}
+
+.hide {
+  display: none;
+}
+
 a {
     text-decoration: none;
 }
@@ -75,12 +91,12 @@ main p {
     font-style: italic;
 }
 
-footer {
-    font-size: 5px;
+.footer {
+    font-size: 10px;
     font-style: italic;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 750px) {
     body{
         background-image: none;
     }
