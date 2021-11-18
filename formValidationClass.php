@@ -61,7 +61,7 @@
                 $validForm = true;
                 
             } else {
-                echo "Invalid Email please enter you email in the follwing format: example@example.com  ";
+                echo "Invalid Email please enter you email in the following format: example@example.com  ";
                 $validForm = false;
             }
 
@@ -99,7 +99,7 @@
                 
             } else {
                 $validForm = false;
-                $emailError = "Invalid Email please enter you email in the follwing format: example@example.com  ";
+                $emailError = "Invalid Email please enter you email in the following format: example@example.com  ";
                 
             }
 

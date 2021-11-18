@@ -54,7 +54,14 @@ nav {
 .hide {
   display: none;
 }
-
+.regImg {
+    width: 250px;
+    height: 250px;
+}
+.bigImg {
+    width: 500px;
+    height: 500px;
+}
 a {
     text-decoration: none;
 }
@@ -94,6 +101,18 @@ main p {
 .footer {
     font-size: 10px;
     font-style: italic;
+}
+
+.noDesignLink{
+    text-decoration: underline;
+    color: blue;
+    
+}
+
+a.noDesignLink{
+    text-decoration: underline;
+    color: blue;
+    
 }
 
 @media only screen and (max-width: 750px) {

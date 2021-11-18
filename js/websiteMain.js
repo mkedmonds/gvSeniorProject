@@ -9,8 +9,13 @@ $(document).ready(function () {
 
   
     $("img.hamburMenu").unbind("click").click(function() {
-        console.log("CLICK");
+        //console.log("CLICK");
         $("nav").toggle(100);
+    });
+
+    $("img.changeImgSize").click(function () {
+        console.log("CLICK");
+        $("#changeImgSize").toggleClass("regImg bigImg")
     });
 
 });
