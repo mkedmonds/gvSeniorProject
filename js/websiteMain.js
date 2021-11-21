@@ -15,7 +15,24 @@ $(document).ready(function () {
 
     $("img.changeImgSize").click(function () {
         console.log("CLICK");
-        $("#changeImgSize").toggleClass("regImg bigImg")
+        $("img.changeImgSize").toggleClass("bigImg")
+    });
+
+    $("img.changeImgSize2").click(function () {
+        console.log("CLICK1");
+        $("img.changeImgSize2").toggleClass("bigImg")
+    });
+    $("img.changeImgSize3").click(function () {
+        console.log("CLICK2");
+        $("img.changeImgSize3").toggleClass("regImg bigImg")
+    });
+    $("img.changeImgSize4").click(function () {
+        console.log("CLICK3");
+        $("img.changeImgSize4").toggleClass("regImg bigImg")
+    });
+    $("img.changeImgSize5").click(function () {
+        console.log("CLICK5");
+        $("img.changeImgSize5").toggleClass("regImg bigImg")
     });
 
 });

@@ -35,6 +35,37 @@
 
       $validateThisForm->validateTextarea($inSpecial);
 
+      if($validForm) {
+          try {
+            require_once("connection.php");
+
+            $sql = "
+                INSERT INTO indexcontact(name, email, textarea)
+
+                VALUES(:inName, :inEmail, :inSpecial)
+            ";
+
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(":inName", $inName);
+            $stmt->bindParam(":inEmail", $inEmail);
+            $stmt->bindParam(":inSpecial", $inSpecial);
+
+            //Execute Statement
+
+            $stmt->execute();
+
+          }
+          catch (PDOException $e) {
+            $message = "There has been a problem. The system administrator has been contacted. Please try again later.";
+
+            error_log($e->getMessage());			//Delivers a developer defined error message to the PHP log file at c:\xampp/php\logs\php_error_log
+            error_log(var_dump(debug_backtrace()));
+        
+            //Clean up any variables or connections that have been left hanging by this error.		
+        
+            header('Location: eventsForm.php');	//sends control to a User friendly page	
+        }
+      }
 
     }
 
@@ -45,7 +76,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignments</title>
+    <title>HomePage</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/websiteMain.js"></script>
@@ -57,24 +88,25 @@
 
     <a href="index.php">
         <header>
-            <h1>Name Place Holder</h1>
+            <h1>Madeline Edmonds</h1>
         </header>
     </a>
 
     <img class="hamburMenu" src="img/hambur2.png" alt="Menu bar for navigation">
-    
+
     <nav class="naviMenu">
         
-        <a href="resume.html">Resume</a>
-        <a href="photoshop/index.html">Photoshop</a>
-        <a href="advancedHtml/index.html">Advanced Html</a>
-        <a href="javascript/index.html">Javascript</a>
-        <a href="php/index.html">PHP</a>
-        <a href="jquery/index.html">JQuery</a>
-        <a href="widgets/index.html">Widgets</a>
-        <a href="seniorDmacc/index.html">Senior Project-DMACC</a>
-        <a href="wordpress/index.html">WordPress</a>
-        <a href="softwareDevelopment/index.html">Software Development</a>
+        <li class="active"><a href="index.php">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="photoshop/index.html">Photoshop</a></li>
+        <li><a href="advancedHtml/index.html">Advanced Html</a></li>
+        <li><a href="javascript/index.html">Javascript</a></li>
+        <li><a href="php/index.php">PHP</a></li>
+        <li><a href="jquery/index.html">JQuery</a></li>
+        <li><a href="widgets/index.html">Widgets</a></li>
+        <li><a href="seniorDmacc/index.html">Senior Project-DMACC</a></li>
+        <li><a href="wordpress/index.html">WordPress</a></li>
+        <li><a href="softwareDevelopment/index.html">Software Development</a></li>
                 
     </nav>
 
@@ -88,6 +120,8 @@
             <p>
             Feel free to look over my work. If you would like to contact me for any questions or comments, please use the form below with your contact information and I will reply back to you as soon as possible. if you would like to offer me a job, please also fill out the form below. 
             </p>         
+
+            <p>Want to see the code? View my GitHub <a class="noDesignLink" href="https://github.com/mkedmonds">here.</a></p>
             
             <i>Harassment and trolling of any kind are not tolerated and your message will be deleted and ignored.</i>
 

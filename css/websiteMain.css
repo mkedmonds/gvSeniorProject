@@ -83,12 +83,21 @@ a:link {
   a:active {
     color:black;
   }
-nav a {
+.naviMenu li {
     padding: 5px;
+    display: inline;
+    list-style-type: none;
     /* font-size: 23px; */
     /* color:black; */
 }
 
+.active {
+    background-color: #5C3836;
+    padding: 5px;
+}
+.active a{
+    color: white;
+}
 main p {
     font-size: 20px;
 }
@@ -136,6 +145,10 @@ a.noDesignLink{
     nav{
         display: none;
     }
+    .naviMenu li{
+        display: block;
+    }
+    
     #container{
         width: 100%;
         padding: 5px;
