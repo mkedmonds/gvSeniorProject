@@ -19,7 +19,7 @@
 
       $inName = $_POST["nameField"];
       $inEmail = $_POST["emailField"];
-      $inHidden = $_POST["hidden"];
+      $inHidden = $_POST["textFieldHidden"];
       $inSpecial = $_POST["textField"];
      
 
@@ -70,7 +70,7 @@
     }
 
 ?> 
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -121,7 +121,7 @@
             Feel free to look over my work. If you would like to contact me for any questions or comments, please use the form below with your contact information and I will reply back to you as soon as possible. if you would like to offer me a job, please also fill out the form below. 
             </p>         
 
-            <p>Want to see the code? View my GitHub <a class="noDesignLink" href="https://github.com/mkedmonds">here.</a></p>
+            <p>Want to see the code? View my <a class="noDesignLink" href="https://github.com/mkedmonds">GitHub</a></p>
             
             <i>Harassment and trolling of any kind are not tolerated and your message will be deleted and ignored.</i>
 
@@ -154,26 +154,26 @@
                             <p>
                                 <label for="nameField">Name:</label>
 
-                                <input type="text" name="nameField" value="<?php echo $inName ?>">
+                                <input type="text" name="nameField" id="nameField" value="<?php echo $inName ?>">
 
                                 <span class="error"><?php echo $nameError ?></span>
                             </p>
 
                             <p class="hide">
                                 <label for="textFieldHidden">Enter Name or Number</label>
-                                <input type="text" name="hidden" id="hidden" value="<?php echo $inHidden ?>">
+                                <input type="text" name="textFieldHidden" id="textFieldHidden" value="<?php echo $inHidden ?>">
                             </p>
 
                             <p>
                                 <label for="emailField">Email:</label>
 
-                                <input type="text" name="emailField" value="<?php echo $inEmail ?>">
+                                <input type="text" name="emailField" id="emailField" value="<?php echo $inEmail ?>">
 
                                 <span class="error"><?php echo $emailError ?></span>
                             </p>
 
                             <p>
-                                <label for="textField">Comments/Questions: <span class="error"><?php echo $specialError?></span></label><br>
+                                <label for="textareField">Comments/Questions: <span class="error"><?php echo $specialError?></span></label><br>
 
                                 <textarea name="textField" id="textField" cols="50" rows="10"><?php echo $inSpecial ?></textarea>
                                 

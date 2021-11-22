@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -40,7 +41,7 @@
         <main>
             <p>PHP (Hypertext Preprocessor) is a server-side language used for making interactive webpages. This can be shown in the form of form checking and validation, auto emailers, and login pages.</p>
 
-            <p>View the GitHub code <a class="noDesignLink" href="https://github.com/mkedmonds/wdv341">here.</a></p>
+            <p>View the GitHub <a class="noDesignLink" href="https://github.com/mkedmonds/wdv341">code.</a></p>
 
             <P>There are some forms on these pages. Do not give any real information.</P>
 
